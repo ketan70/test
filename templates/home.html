@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+
+{% block bace %}
+<br>
+
+<div class="text-center ">
+    <img src='static\icon s.GIF' class="img-fluid" width="15%" alt="Responsive image">
+</div>
+
+
+<div class="container mt-5  bnt-Primary">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class=" border border-Dark rounded-left">
+                <div class="container ">
+                    <div class='container'>
+                        <h2 align='center' class="text-info"> Survay </h2>
+                        <br>
+                        <h3 align='center' class=""> Select the type of survey </h3>
+                        <br>
+
+
+
+
+
+                        <form method="POST" action="/form">
+
+                            <select class="form-select" name="select" aria-label="Default select example">
+                                <option selected>select the the type of room you want</option>
+
+                                {% for i in l %}
+
+                                <option value={{i}}>{{i}}</option>
+
+
+
+                                {% endfor %}
+
+                            </select>
+                            <br>
+
+                            <div class="d-grid gap-2 col-4 mx-auto container">
+                                <button class="btn d-grid btn-sm btn-outline-primary custom " type="submit"><h5>Select & Next</h5> </button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container text-cemter col-md-8 ">
+    <form>
+        <div class="container">
+            <div class="row mb-6 ">
+                {% for i in l2 %}
+                <div class="col-md-6 row md-6 ">
+
+
+
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Survey</h6>
+                            <p class="card-text">Gather information about what most people do or think about
+                                {{i}} A total No of residents were surveyed about the project
+                                <br> ( {{i}} )</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock bace %}

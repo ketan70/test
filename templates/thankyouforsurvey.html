@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block bace %}
+<br>
+<br>
+<br>
+<div class="alert alert-info text-center" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    Your form are successfully Submitted
+</div>
+
+
+<div class="jumbotron text-center">
+    <h1 class="display-3">Thank You!</h1>
+    <br>
+    <p class="lead "><strong>Thanks for pointing out what we can do better in the future</strong> ; we really appreciate your valuable feedback.</p>
+    <hr>
+    <p class="lead">
+
+        <p class="lead btn-success"><h1 class="lead text-success text-muted">If you not fill the all  the {{AL}} Survey than</h1> </p>
+
+        <a class="btn btn-outline-success btn " href="/home" role="button"><h6>Continue to Next survey</h6>   
+    </a>
+    </p>
+
+    <hr>
+    <p>Thank you for sharing your insights with us your positive and negative. It’s hard for us to hear that  if you had any negative experience,
+        as we always do our best to provide with the best support possible.
+       <br> We are working to fix your negative point  </p>
+    <p>
+        <h4>Having trouble?  <a href="/contact">Contact us</a></h4>
+    </p>
+    
+</div>
+
+<div class="text-center ">
+    <img src='static\icon s.GIF' class="img-fluid" width="15%" alt="Responsive image">
+</div>
+
+
+
+
+
+{% endblock bace %}

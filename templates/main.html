@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block bace %}
+
+
+
+<div class="text-center ">
+  <img src='static\icon s.GIF' class="img-fluid" width="15%" alt="Responsive image">
+</div>
+
+<h2 align='center' class="text-info"> Survay </h2>
+
+<div class="container mt-5  bnt-Primary">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-10 col-lg-10">
+      <div class=" border border-Dark rounded-left">
+        <div class="container ">
+          <br>
+          
+          <h3 align="center">Basic information</h3>
+
+          <form method="POST" action="/home">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Full Name</label>
+              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp"
+                required>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label" name=" MNO">Mobile NO </label>
+              <input type="number" class="form-control" name="MNO" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label" name=" FNO"> ID-NO </label>
+              <input type="number" class="form-control" name="FNO" placeholder="Flat No *" id="exampleInputPassword1" required>
+            </div>
+
+            <!--<div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="chek">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>-->
+            <br>
+            <div class="container text-center">
+              <button type="submit" class="btn btn-outline-primary"> Submit & Next </button>
+            </div>
+          </form>
+          <br>
+          <br>
+
+        </div>
+      </div>
+    </div>
+    <div>
+</div>
+
+      {% endblock bace %}

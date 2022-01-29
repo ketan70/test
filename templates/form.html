@@ -1,0 +1,113 @@
+{% extends 'layout.html' %}
+{% block bace %}
+
+<div class="text-center ">
+    <img src='static\icon s.GIF' class="img-fluid" width="15%" alt="Responsive image">
+</div>
+
+
+<h2 align="center " class="text-primary"> {{name_survey}} Survey </h2>
+
+<form action="/thanks" method="POST">
+    <input type="hidden" name="select" value={{name_survey}}>
+    {% set count =0 %}
+
+    {% for i in l3 %}
+
+    {% set count = count +1 %}
+    {% set curName = loop.index | string() %}
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+                    <div class="question bg-white p-3 border-bottom">
+
+                        <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                            <h4 class="text-info">{{name_survey}} Survey Quation</h4><span>({{loop.index}} of
+                                {{l3|length}})</span>
+                        </div>
+
+                    </div>
+
+                    <div class="question bg-white p-3 border-bottom">
+
+
+                        {% set k =0 %}
+                        {% for j in i %}
+
+                        {% if loop.index==1 %}
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.</h3>
+                            <h5 class="mt-1 ml-2">{{j}}</h5>
+
+
+                            <input type="hidden" name="Q" value={{j}}>
+
+
+                        </div>
+
+                        {% else %}
+                        <input type="radio" id={{j}} name="{{curName}}" value={{j}}>
+
+                        <label for={{j}}>{{j}}</label><br>
+                        {% endif %}
+
+                        {% set k = k+1 %}
+                        {% endfor %}
+
+
+                        <input type="hidden" name="curName" value={{curName}}>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    {% endfor %}
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+
+                <div class="input-group">
+                    <span class="input-group-text"> write if any other query <br>or any suggestion </span>
+                    <input type="textarea" class="form-control" aria-label="With textarea" name="sugession">
+                </div>
+                <br>
+
+
+                <br>
+                <div class=" form-check container mt-5col-md-10 col-lg-10 ">
+                    <input type="checkbox" class="form-check-input" name="chek" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">
+                        <h5>Check me out if you are satisfied whith Our work</h5>
+                    </label>
+                </div>
+
+
+                <br>
+                <br>
+                <div class="d-grid gap-1 col-6 mx-auto container">
+
+                    <button class="btn btn-outline-primary" type="submit"> Submit the Form </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+{% endblock bace %}
+
+
